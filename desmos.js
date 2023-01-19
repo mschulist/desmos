@@ -76,7 +76,6 @@ state.expressions.list.push(
     folderId: "1",
     latex: "f_{1}\\left(x,y,\\theta\\right)=\\left(\\frac{d}{d-f_{2}\\left(x,y,\\theta\\right)\\cdot t_{oggle}}x\\cos\\left(a+\\theta\\right),\\frac{d}{d-f_{2}\\left(x,y,\\theta\\right)\\cdot t_{oggle}}\\left(x\\sin\\left(a_{2}\\right)\\sin\\left(a+\\theta\\right)+y\\cos\\left(a_{2}\\right)\\right)\\right)"
 },
-
 {
     type: "text",
     folderId: "1",
@@ -87,7 +86,6 @@ state.expressions.list.push(
     folderId: "1",
     latex: "f_{2}\\left(x,y,\\theta\\right)=x\\sin\\left(a+\\theta\\right)\\cos\\left(a_{2}\\right)-y\\sin\\left(a_{2}\\right)"
 },
-
 {
     type: "text",
     folderId: "1",
@@ -98,7 +96,6 @@ state.expressions.list.push(
     folderId: "1",
     latex: "f_{1c}\\left(x,y,z\\right)=f_{1}\\left(\\sqrt{x^{2}+z^{2}},y,\\tan^{-1}\\left(\\frac{z+.0001}{x}\\right)+\\left\\{x<0:1,0\\right\\}\\pi\\right)"
 },
-
 {
     type: "text",
     folderId: "1",
@@ -119,7 +116,6 @@ state.expressions.list.push(
     folderId: "1",
     latex: "c_{artesian}\\left(x,y,\\theta\\right)=\\left[x\\cos\\theta,y,x\\sin\\theta\\right]"
 },
-
 {
     type: "text",
     folderId: "1",
@@ -138,9 +134,8 @@ state.expressions.list.push(
 {
     type: "expression",
     folderId: "1",
-    latex: "d_{epth}\\left(l_{ist}\\right)=\\operatorname{mean}\\left(\\operatorname{sort}\\left(\\left[f_{2c}\\left(l_{ist}\\left[3i+1\\right],l_{ist}\\left[3i+2\\right],l_{ist}\\left[3i+3\\right]\\right)\\operatorname{for}i=\\left[0...\\frac{\\operatorname{length}\\left(l_{ist}\\right)}{3}-1\\right]\\right]\\right)\\right)" // \\left[1,2\\right] // AUDREY
+    latex: "d_{epth}\\left(l_{ist}\\right)=\\operatorname{mean}\\left(\\operatorname{sort}\\left(\\left[f_{2c}\\left(l_{ist}\\left[3i+1\\right],l_{ist}\\left[3i+2\\right],l_{ist}\\left[3i+3\\right]\\right)\\operatorname{for}i=\\left[0...\\frac{\\operatorname{length}\\left(l_{ist}\\right)}{3}-1\\right]\\right]\\right)\\right)"
 },
-
 {
     type: "text",
     folderId: "1",

@@ -1,0 +1,24 @@
+{
+  "name": "desmos",
+  "version": "1.0.0",
+  "description": "taking blender to desmos",
+  "main": "desmos.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4udr3y/desmos.git"
+  },
+  "author": "Audrey Chiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4udr3y/desmos/issues"
+  },
+  "homepage": "https://github.com/4udr3y/desmos#readme",
+  "dependencies": {
+    "chrome-finder": "^1.0.7",
+    "puppeteer": "^19.5.2"
+  }
+}

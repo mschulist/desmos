@@ -12,7 +12,6 @@ objects=[]
 
 for object in all_objects:
     for s in object.material_slots:
-        
         material=object.material_slots[0].material
         nodes=material.node_tree.nodes
         principled=next(n for n in nodes if n.type == 'BSDF_PRINCIPLED')

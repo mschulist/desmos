@@ -41,17 +41,44 @@ for object in objects:
     f.write('\n\n// {}\n'.format(object[-1][0]))
     position = object[-1][1]
     color=object[-1][2]
+    print(object[-1])
     for face in object[:-1]:
-        f.write('[1,{},{},{},\n'.format(round(color[0]*360,3),round(color[1],3),round(color[2],3)))
+        if object[-1][0] == 'water':
+            f.write('[.8,{},{},{},\n'.format(round(color[0]*360,3),round(color[1],3),round(color[2],3)))
+        else:
+            f.write('[1,{},{},{},\n'.format(round(color[0]*360,3),round(color[1],3),round(color[2],3)))
         i = 0
         face.reverse()
         for vertex in face:
             x_coord = round(vertex[0]+position[2],3)
             y_coord = round(vertex[1]+position[2],3)
             z_coord = round(vertex[2]+position[2],3)
-            if i != len(face)-1:
-                f.write('{},{},{},\n'.format(x_coord,y_coord,z_coord))
-            else:
-                f.write('{},{},{}],\n\n'.format(x_coord,y_coord,z_coord))
+            
+            # If not water
+            if not object[-1][0] == 'water':
+                if i != len(face)-1:
+                    f.write('{},{},{},\n'.format(x_coord,y_coord,z_coord))
+                else:
+                    f.write('{},{},{}],\n\n'.format(x_coord,y_coord,z_coord))
+            # If on bottom
+            elif y_coord != 2.0:
+                if i != len(face)-1:
+                    f.write('{},{},{},\n'.format(x_coord,y_coord,z_coord))
+                else:
+                    f.write('{},{},{}],\n\n'.format(x_coord,y_coord,z_coord))
+            # on water surface
+            elif y_coord == 2.0:
+                # surface edge
+                if x_coord == 5.0 or x_coord == -5.0 or z_coord == 5.0 or z_coord == -5.0:
+                    if i != len(face)-1:
+                        f.write('{x},\'{y} +w_{{ave1}}\\\\left({x}\\\\right) +w_{{ave2}}\\\\left({z}\\\\right)\',{z},\n'.format(x=x_coord,y=y_coord,z=z_coord))
+                    else:
+                        f.write('{x},\'{y} +w_{{ave1}}\\\\left({x}\\\\right) +w_{{ave2}}\\\\left({z}\\\\right)\',{z}],\n\n'.format(x=x_coord,y=y_coord,z=z_coord))
+                # surface middle
+                else:
+                    if i != len(face)-1:
+                        f.write('\'{x} +w_{{ave3}}\\\\left({x}+{z}\\\\right) \',\'{y} +w_{{ave1}}\\\\left({x}\\\\right) +w_{{ave2}}\\\\left({z}\\\\right)\',{z},\n'.format(x=x_coord,y=y_coord,z=z_coord))
+                    else:
+                        f.write('\'{x} +w_{{ave3}}\\\\left({x}+{z}\\\\right) \',\'{y} +w_{{ave1}}\\\\left({x}\\\\right) +w_{{ave2}}\\\\left({z}\\\\right)\',{z}],\n\n'.format(x=x_coord,y=y_coord,z=z_coord))
             i += 1
 f.close()

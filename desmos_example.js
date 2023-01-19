@@ -494,12 +494,12 @@ state.expressions.list.push(
 },
 { // Background color
     type: "expression",
-    folderID: "5",
+    folderId: "5",
     latex: "b_{ackground}=\\operatorname{rgb}\\left(230,223,225\\right)"
 },
 { // Background
     type: "expression",
-    folderID: "5",
+    folderId: "5",
     color: "#d6d6d6",
     fillOpacity: "1",
     latex: "\\left[-1,1\\right]y<100"

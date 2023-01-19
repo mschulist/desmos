@@ -50,8 +50,7 @@ state.expressions.list.push(
     type: "expression",
     folderId: "3",
     latex: "t_{oggle}=1",
-    slider: {hardMin: true, hardMax: true, min: '0', max: '1', step:'1'}
-    
+    slider: {hardMin: true, hardMax: true, min: '0', max: '1', step:'1'} 
 },
 {
     type: "expression",

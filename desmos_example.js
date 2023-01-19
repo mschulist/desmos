@@ -250,7 +250,208 @@ state.expressions.list.push(
 
 const polygons = [
 
-// PASTE BLENDER OUTPUT HERE  
+// water
+    [.8,218.375,0.764,1.0,
+    -5.0,0.0,-5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -5.0,0.0,5.0],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,0.0,-5.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    -5.0,0.0,-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,0.0,5.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    5.0,0.0,-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    -5.0,0.0,5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    5.0,0.0,5.0],
+    
+    [.8,218.375,0.764,1.0,
+    -5.0,0.0,5.0,
+    5.0,0.0,5.0,
+    5.0,0.0,-5.0,
+    -5.0,0.0,-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(5.0\\right)',5.0,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    2.5,'2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    5.0,'2.0 +w_{ave1}\\left(5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    0.0,'2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+0.0\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '2.5 +w_{ave3}\\left(2.5+2.5\\right) ','2.0 +w_{ave1}\\left(2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+-2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -2.5,'2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+0.0\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '0.0 +w_{ave3}\\left(0.0+2.5\\right) ','2.0 +w_{ave1}\\left(0.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+-2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-5.0\\right)',-5.0],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+0.0\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(-2.5\\right)',-2.5],
+    
+    [.8,218.375,0.764,1.0,
+    '-2.5 +w_{ave3}\\left(-2.5+2.5\\right) ','2.0 +w_{ave1}\\left(-2.5\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(2.5\\right)',2.5,
+    -5.0,'2.0 +w_{ave1}\\left(-5.0\\right) +w_{ave2}\\left(0.0\\right)',0.0],
     
 ]
 

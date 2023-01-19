@@ -1,4 +1,4 @@
-// Example of animating objects (animating waves)
+// Example of animating objects (animated waves)
 
 state = Calc.getState()
 

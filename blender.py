@@ -1,5 +1,6 @@
 import bpy
 from mathutils import Color
+import os
 
 obdata = bpy.context.object
 obdata = bpy.context.selected_objects # Comment out to export all objects, not just selected ones
@@ -35,7 +36,7 @@ for object in all_objects:
 f = open('desmos_file.txt','w')
     
 for object in objects:
-    f.write('\n\n// {}\n'.format(object[-1][0]))
+    f.write('[\n')
     position = object[-1][1]
     color=object[-1][2]
     for face in object[:-1]:
@@ -49,6 +50,10 @@ for object in objects:
             if i != len(face)-1:
                 f.write('{},{},{},\n'.format(x_coord,y_coord,z_coord))
             else:
-                f.write('{},{},{}],\n\n'.format(x_coord,y_coord,z_coord))
+                f.write('{},{},{}],'.format(x_coord,y_coord,z_coord))
             i += 1
+    f.seek(0, os.SEEK_END)
+    f.seek(f.tell()-1, os.SEEK_SET)
+    f.truncate()
+    f.write('\n]')
 f.close()

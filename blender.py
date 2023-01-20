@@ -30,7 +30,7 @@ for object in all_objects:
         for v in f.vertices:
             face.append(vertices[int(format(v))])
         faces.append(face)
-    faces.append([object.name,object.location,color])
+    faces.append([object.name,object.location,object.color])
     objects.append(faces)
 
 f = open('desmos_file.txt','w')
